@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/KelvinChen684/Go-000/tree/main/Week04/api/v1";
+
+service User {
+  rpc GetUserInfo(UserReq) returns (UserInfo);
+  //rpc ListUsersInfo(UserReq) returns (UserInfo);
+  rpc CreateUser(UserReq) returns (UserStatus);
+  rpc Authenticate(UserReq) returns (UserStatus);
+  rpc SetPass(UserReq) returns (UserStatus);
+}
+
+message UserReq {
+  string Name = 1 ;
+  string Pass = 2 ;
+  string NewPass = 3 ;
+  string Gender = 4 ;
+}
+
+message UserInfo {
+  string Name = 1 ;
+  string Gender = 2 ;
+  int32  Age = 3 ;
+}
+
+message UserStatus {
+  bool success = 1 ;
+}

@@ -1,0 +1,9 @@
+{
+  "driver": "postgres",
+  "db": "userdb",
+  "host": "127.0.0.1",
+  "port": "5432",
+  "user": "root",
+  "sslmode": "disable",
+  "password": "123456"
+}
